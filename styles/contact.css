@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+:root {
+    --orange-1: #e65616;
+    --orange-2: #d1310a;
+    --white: #fff;
+    --grey: #898989;
+    --lightblack-1: #303030;
+    --lightblack-2: #292929;
+    --black-1: #1a1a1a;
+    --black-2: #1f1f1f;
+}
+
+body {
+    background: var(--black-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    /* background-color: var(--lightblack-1); */
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: .6s;
+    /* border: 2px solid white; */
+}
+
+header .logo {
+    font-size: 2.5rem;
+    padding-left: 10rem;
+    font-weight: 800;
+    transition: .6s;
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--orange-2);
+}
+
+header nav {
+    border: 1px solid;
+    /* width: 40%; */
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+header nav a {
+    position: relative;
+    display: inline-block;
+    color: var(--grey);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: .5s;
+}
+
+header nav a::after {
+    content: '';
+    width: 0;
+    height: .3rem;
+    background-color: var(--orange-1);
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+    transition: width 500ms;
+    /* border: 1px solid; */
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a.active {
+    color: var(--white);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    margin-top: 8rem;
+    padding: 5rem 10rem;
+    /* border: 2px solid white; */
+}
+
+.sub-title {
+    font-size: 6rem;
+    text-transform: capitalize;
+    color: var(--white);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-left p {
+    margin-top: 2rem;
+    color: var(--grey);
+    font-size: 1.8rem;
+}
+
+.contact-left p i {
+    font-size: 1.5rem;
+    color: var(--grey);
+    margin-right: 2.5rem;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.social-icons {
+    margin-top: 3rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--grey);
+    display: inline-block;
+    transition: color 0.5s, transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: var(--orange-2);
+    transform: translateY(-0.4rem);
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: var(--lightblack-1);
+    padding: 15px;
+    margin: 15px 0;
+    color: var(--orange-1);
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form textarea {
+    resize: none;
+}
+
+form .btn {
+    border: none;
+    width: 8rem;
+    padding: .6rem 1rem;
+    border-radius: .5rem;
+    background: var(--orange-1);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .5s;
+    /* margin-left: 2rem; */
+}
+
+#msg {
+    color: #61b752;
+    display: block;
+    margin-top: -2rem;
+    margin-left: 10rem;
+    font-size: 1.5rem;
+
+}
+
+nav .fa-xmark {
+    /* display: none; */
+}
+/* Breakdown */
+/* ---------------------CSS FOR SMALL SCREENS---------------------- */
+@media only screen and (max-width: 700px) {
+    #header {
+        padding: 1.5rem 3%;
+    }
+    #header .logo {
+        font-size: 2rem;
+        padding-left: 3rem;
+    }
+
+    .container {
+        padding: 3rem 8%;
+        margin-top: 15rem;
+    }
+    .sub-title {
+        font-size: 4rem;
+    }
+    .contact-left {
+    flex-basis: 100%;
+    margin-bottom: 3rem;
+    }
+    .contact-right {
+        flex-basis: 100%;
+    }
+}
