@@ -26,4 +26,34 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 };
 
+// Side Menu
+const sidemenu = document.getElementById("sidemenu");
+function openmenu() {
+    sidemenu.style.right = "0";
+}
+function closemenu() {
+    sidemenu.style.right = "-13rem";
+}
 
+// Time and Date in GHANA
+const TIMEZONE = 'Africa/Accra';
+const elTime = document.getElementById('gh-time');
+const elDate = document.getElementById('gh-date');
+
+function updateTimeAndDate() {
+  const now = new Date();
+  const timeFormatter = new Intl.DateTimeFormat('en-GB', {
+    timeZone: TIMEZONE,
+    hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+  });
+  const dateFormatter = new Intl.DateTimeFormat('en-GB', {
+    timeZone: TIMEZONE,
+    weekday: 'short', day: 'numeric', month: 'short', year: 'numeric'
+  });
+  elTime.textContent = timeFormatter.format(now);
+  elDate.textContent = dateFormatter.format(now);
+}
+
+// Initialize and update every second
+updateTimeAndDate();
+setInterval(updateTimeAndDate, 1000);
