@@ -20,21 +20,29 @@
 
 <body>
     <header id="header">
+        <div class="top-bar">
+            <!-- <div class="brand">Nana Kwame Portfolio</div> -->
+            <div class="time-date">
+                <div class="time-box">
+                    <div class="date-box" id="gh-date">—</div>
+                    <div id="gh-time">--:--:--</div>
+                    <div style="font-size:0.75rem;color:var(--white);text-align:center">Accra, GH</div>
+                </div>
+            </div>
+        </div>
         <div class="logo">Py<span>Nana.</span></div>
-        <nav>
-            <ul>
-                <li><a href="#banner" class="active">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-
-            </ul>
+        <nav id="sidemenu">
+            <a href="#banner" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="contact.html">Contact Me</a>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </nav>
         <div class="top-right">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <button type="button">LET'S TALK</button>
+            <a href="contact.html">LET'S TALK</a>
         </div>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </header>
 
     <section id="banner">
@@ -94,6 +102,12 @@
                                     <div class="skills python">75%</div>
                                 </div>
                             </li>
+                            <li>
+                                <p>SQL</p>
+                                <div class="container">
+                                    <div class="skills sql">70%</div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
@@ -113,7 +127,7 @@
                     </div>
                 </div>
                 <div class="about-col-2">
-                    <img src="images/user.png" alt="User's image">
+                    <img src="https://dl.dropbox.com/scl/fi/u74vg71z6nmsj0peqit8s/user.JPG?rlkey=7rwu5vshc3uttms7npmav6xqp&st=un2dstiw&dl=0" alt="User's image">
                 </div>
             </div>
         </div>
@@ -160,7 +174,7 @@
             <h2 class="sub-title-2">My Work</h2>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/work-1.png" alt="work-1">
+                    <img src="https://dl.dropbox.com/scl/fi/o5rk7ahi925eeoodve4pi/work-1.png?rlkey=t19fydkcz81x0wh3j9gxfrn6v&st=dkmkhyoa&dl=0" alt="work-1">
                     <div class="layer">
                         <h3>Social Media App</h3>
                         <p>The app connects you to the talented people around the around. Download if from play store.
@@ -169,7 +183,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/work-2.png" alt="work-2">
+                    <img src="https://dl.dropbox.com/scl/fi/z193koto07m4t1v8g6ru7/work-2.png?rlkey=ldl47mos0zm3aae6mk9fywbp9&st=d1wrdbu2&dl=0" alt="work-2">
                     <div class="layer">
                         <h3>Music App</h3>
                         <p>The app connects you to the talented people around the around. Download if from play store.
@@ -178,7 +192,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/work-3.png" alt="work-3">
+                    <img src="https://dl.dropbox.com/scl/fi/bp4nrjibpp5l09sdu5zo7/work-3.png?rlkey=0apdvgai0imkyjf67xevebmqm&st=kt19mf76&dl=0" alt="work-3">
                     <div class="layer">
                         <h3>Online Shopping App</h3>
                         <p>The app connects you to the talented people around the around. Download if from play store.
@@ -226,8 +240,8 @@
             <div class="personal-detials">
                 <h5>Contact us</h5>
                 <div>
-                    <span>Phone: (+233) 243 574622</span>
-                    <span>Fax: (+233) 243 574622</span>
+                    <span>Phone: (+233) 123 456789</span>
+                    <span>Fax: (+233) 123 456789</span>
                     <span>Contact us at: info@mail.com</span>
                 </div>
                 <div class="social-icons-down">
@@ -247,7 +261,7 @@
             <p>Copyright &copy; <span id="year"></span> - Developed by Nana Kwame</p>
             <p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a></p>
         </div>
-        <!-- <a class="arrow-up" href="#"><i class="fa-solid fa-arrow-circle-up"></i></a> -->
+        <a class="arrow-up" href="#banner"><i class="fa-solid fa-arrow-circle-up"></i></a>
     </footer>
 
     <script src="./js/index.js"></script>
